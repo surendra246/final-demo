@@ -1,7 +1,7 @@
 package com.banking.creditcardapp.entity;
 
 import java.math.BigDecimal;
-import java.security.Timestamp;
+import java.time.LocalDateTime;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -24,7 +24,7 @@ public class CreditCardDetails {
     @Column(length = 3, nullable = false)
     private String cvv;
     private BigDecimal limitAmount;
-    private Timestamp createdAt;
-    private Timestamp lastUpdated;
+    private LocalDateTime createdAt;
+    private LocalDateTime lastUpdated;
 }
 

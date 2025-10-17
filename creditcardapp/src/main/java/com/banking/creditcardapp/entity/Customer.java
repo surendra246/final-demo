@@ -1,7 +1,7 @@
 package com.banking.creditcardapp.entity;
 import java.math.BigDecimal;
-import java.security.Timestamp;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -9,7 +9,6 @@ import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import jakarta.transaction.Status;
 import lombok.Data;
 
 @Entity
@@ -28,7 +27,7 @@ public class Customer {
     private LocalDate dob;
     private BigDecimal salary;
     @Enumerated(EnumType.STRING)
-    private Status status;
-    private Timestamp createdAt;
-    private Timestamp lastUpdated;
+    private CustomerStatus status;
+    private LocalDateTime createdAt;
+    private LocalDateTime lastUpdated;
 }

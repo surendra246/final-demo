@@ -1,6 +1,6 @@
 package com.banking.creditcardapp.entity;
 
-import java.security.Timestamp;
+import java.time.LocalDateTime;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -8,10 +8,12 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
+import lombok.Builder;
 import lombok.Data;
 
 @Entity
 @Data
+@Builder
 public class ApplicationRequest {
     @Id @GeneratedValue
     private Integer id;
@@ -20,6 +22,8 @@ public class ApplicationRequest {
     @Enumerated(EnumType.STRING)
     private ApplicationStatus status;
     private String remarks;
-    private Timestamp applicationDate;
-    private Timestamp createdAt;
+    private LocalDateTime applicationDate;
+    private LocalDateTime createdAt;
 }
+
+
