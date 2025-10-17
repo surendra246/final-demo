@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import lombok.Data;
@@ -13,8 +14,9 @@ import lombok.Data;
 @Entity
 @Data
 public class CreditCardDetails {
-    @Id @GeneratedValue
-    private Integer id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // or SEQUENCE
+    private Long id;
     @ManyToOne
     private Customer customer;
     @Column(length = 16, unique = true, nullable = false)

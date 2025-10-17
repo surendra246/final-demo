@@ -2,7 +2,6 @@ package com.banking.creditcardapp.mapper;
 
 
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import org.modelmapper.ModelMapper;
@@ -11,9 +10,7 @@ import org.springframework.stereotype.Component;
 
 import com.banking.creditcardapp.dto.CreditCardApplicationRequest;
 import com.banking.creditcardapp.dto.CreditCardApplicationResponse;
-import com.banking.creditcardapp.dto.CreditCardSearchResponse;
 import com.banking.creditcardapp.entity.ApplicationRequest;
-import com.banking.creditcardapp.entity.CreditCardDetails;
 import com.banking.creditcardapp.entity.Customer;
 import com.banking.creditcardapp.entity.CustomerStatus;
 
@@ -35,11 +32,11 @@ public class CreditCardMapper {
         return modelMapper.map(app, CreditCardApplicationResponse.class);
     }
 
-    public CreditCardSearchResponse toSearchResponse(CreditCardDetails card) {
-        CreditCardSearchResponse response = modelMapper.map(card, CreditCardSearchResponse.class);
-        response.setCustomerName(card.getCustomer().getName());
-        response.setExpiryDate(LocalDate.of(card.getExpiryYear(), card.getExpiryMonth(), 1));
-        return response;
-    }
+    // public CreditCardSearchResponse toSearchResponse(CreditCardDetails card) {
+    //     CreditCardSearchResponse response = modelMapper.map(card, CreditCardSearchResponse.class);
+    //     response.setCustomerName(card.getCustomer().getName());
+    //     response.setExpiryDate(LocalDate.of(card.getExpiryYear(), card.getExpiryMonth(), 1));
+    //     return response;
+    // }
 }
 

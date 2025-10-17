@@ -4,4 +4,4 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.banking.creditcardapp.entity.ApplicationRequest;
 
-public interface ApplicationRequestRepository extends JpaRepository<ApplicationRequest, Integer> {}
+public interface ApplicationRequestRepository extends JpaRepository<ApplicationRequest, Long> {}
