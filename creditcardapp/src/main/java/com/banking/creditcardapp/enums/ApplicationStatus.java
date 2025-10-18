@@ -1,8 +1,9 @@
-package com.banking.creditcardapp.entity;
+package com.banking.creditcardapp.enums;
 
 public enum ApplicationStatus {
     PENDING,
     APPROVED,
     REJECTED
 }
+
 

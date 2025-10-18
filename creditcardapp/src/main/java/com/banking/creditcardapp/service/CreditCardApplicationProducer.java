@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import com.banking.creditcardapp.dto.CreditCardApplicationKafkaMessage;
 
 @Service
-public class KafkaProducer {
+public class CreditCardApplicationProducer {
     @Autowired
     private KafkaTemplate<String, CreditCardApplicationKafkaMessage> kafkaTemplate;
 
